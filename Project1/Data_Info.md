@@ -19,7 +19,7 @@ In Data Analysis, the analyst must ensure that the data is 'clean' before doing 
 - All membership_dates were in the 2000's. 
 
 ## Datasets used
-This dataset contains one csv file named '[club_member_info.csv](https://github.com/gm1ke/SQL_Project/blob/main/club_member_info.csv) '.
+This dataset contains one csv file named '[club_member_info.csv](https://github.com/gm1ke/SQL_Projects/blob/main/Project1/club_member_info.csv) '.
 
 The initial columns and their type in the provided CSV file are:
 - full_name : text
