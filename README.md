@@ -1,5 +1,5 @@
 
-# data_cleaning
+# SQL_Projects
 A repository of SQL projects.
 
 ## Introduction
