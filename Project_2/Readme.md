@@ -11,7 +11,7 @@ Query :
 CREATE TABLE PROJECTS AS
 SELECT *FROM warehouse_and_retail_sales;
 select *from projects;
-
+````
 
 
 ### checking for missing values
@@ -29,7 +29,7 @@ WHERE `YEAR` IS NULL
    OR `RETAIL SALES` IS NULL 
    OR `RETAIL TRANSFERS` IS NULL 
    OR `WAREHOUSE SALES` IS NULL;
-
+````
 Result : 
 ![supply](https://github.com/user-attachments/assets/f9470d92-dc6d-4b0e-961f-158294833e32)
 
@@ -49,7 +49,7 @@ GROUP BY
     `RETAIL SALES`, `RETAIL TRANSFERS`, `WAREHOUSE SALES`
 HAVING 
     COUNT(*) > 1;
-
+````
 Result : 
 ![s2](https://github.com/user-attachments/assets/f9470d92-dc6d-4b0e-961f-158294833e32)
 
@@ -64,7 +64,7 @@ Query :
 select supplier, round(sum(`retail sales`),3) as total_retail_sales
 from projects 
 group by supplier;
-
+````
 Result :
 ![s3](https://github.com/user-attachments/assets/25d4fe92-726b-4153-8029-b280e9bb71bb)
 
@@ -74,7 +74,7 @@ Query :
 ````sql
 select count(distinct `item code`) as distinct_item_codes
 from projects;
-
+````
 Result :
 ![s3](https://github.com/user-attachments/assets/19b5fa4c-9a2d-4ae9-9917-3843a53e5173)
 
@@ -85,7 +85,7 @@ Query :
 select `item type`, round(sum(`retail sales`),3) as total_retail_sales
 from projects 
 group by `item type`;
-
+````
 Result :
 ![s4](https://github.com/user-attachments/assets/4a6973ac-932d-449f-98cf-5153eed632cb)
 
@@ -96,7 +96,7 @@ Query :
 select supplier, year, month, round(sum(`retail sales`),3) as total_retail_sales
 from projects 
 group by supplier, year, month;
-
+````
 Result :
 ![s5](https://github.com/user-attachments/assets/37970cb4-7172-43a8-a86b-3f0663ff17dd)
 
@@ -107,7 +107,7 @@ Query :
 select `item description`, max(`retail sales`) as max_warehouse_sales
 from projects 
 group by `item description`;
-
+````
 Result :
 ![s6](https://github.com/user-attachments/assets/31b16565-fdb9-436e-b913-8c93368ef446)
 
@@ -118,7 +118,7 @@ Query :
 select year, round(avg(`retail transfers`),2) as avg_retail_transfers
 from projects
 group by year;
-
+````
 Result :
 ![s7](https://github.com/user-attachments/assets/4c42556c-beb2-49f7-9b46-0c32585ccfb5)
 
@@ -129,7 +129,7 @@ Query :
 select `item description`, round((max(`retail sales`) - min(`retail sales`)),3) as diff_max_min_retail_sales
 from projects 
 group by `item description`;
-
+````
 Result :
 ![s8](https://github.com/user-attachments/assets/fd1aa113-6560-4399-8855-c0f4c0f1fed2)
 
@@ -141,7 +141,7 @@ select `item type`, round(sum(`retail sales`),3) as total_retail_sales
 from projects 
 where `retail sales` > 1000
 group by `item type`;
-
+````
 Result :
 ![s9](https://github.com/user-attachments/assets/8615d078-a6bf-49c1-be65-26eabfb69833)
 
@@ -155,7 +155,7 @@ group by  `item code`, supplier
 having 
 AVG(`retail sales`) <> 0
 order by avg(`retail sales`) ;
-
+````
 Result :
 ![s10](https://github.com/user-attachments/assets/377ad403-823a-4bac-bbfd-4c51368a7d37)
 
@@ -180,7 +180,7 @@ HAVING
     )
 ORDER BY 
     avg_daily_retail_sales;
-
+````
 Result :
 ![s11](https://github.com/user-attachments/assets/d84a1d6c-df2b-401d-b52c-c584c50b0b42)
 
@@ -213,7 +213,7 @@ HAVING
     )
 ORDER BY 
     avg_daily_retail_sales;
-
+````
 Result :
 ![s12](https://github.com/user-attachments/assets/5f89f199-8180-4b6a-926a-d7e505bf3e65)
 
@@ -247,6 +247,6 @@ ORDER BY
 
 Result :
 ![s13](https://github.com/user-attachments/assets/630c4ea1-bbff-493c-95ec-683bd433534d)
-
+````
 
 
