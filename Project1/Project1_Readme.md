@@ -1,13 +1,7 @@
 
 # Club Member Information
 ## An SQL Data Cleaning Project
-### by jaime.m.shaker@gmail.com
 
-For this project, you play a role as a Data Analyst the must clean and restructure a dirty dataset.
-
-A survey was done of current club members and we would like to restructure the data to a more organized and usable form.
-
-In this project, we will 
 
 1. Check for duplicate entries and remove them.
 2. Remove extra spaces and/or other invalid characters.
