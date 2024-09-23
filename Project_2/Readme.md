@@ -1,5 +1,4 @@
 # Data Aggregation 
-# and Grouping
 
  MySQL project for analyzing warehouse and retail sales with the following questions.
 
